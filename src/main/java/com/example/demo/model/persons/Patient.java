@@ -44,11 +44,11 @@ public class Patient {
     public Patient() {
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -76,15 +76,15 @@ public class Patient {
         this.sex = sex;
     }
 
-    public String getSalary() {
+    public Long getSalary() {
         return salary;
     }
 
-    public void setSalary(String salary) {
+    public void setSalary(Long salary) {
         this.salary = salary;
     }
 
-    public Patient(int id, String name, String age, Boolean sex, String salary) {
+    public Patient(Long id, String name, String age, Boolean sex, Long salary) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -93,7 +93,7 @@ public class Patient {
     }
 
     @Id
-    int id;
+    Long id;
 
     @Column(name = "name")
     String name;
@@ -105,7 +105,7 @@ public class Patient {
     Boolean sex;
 
     @Column(name = "salary")
-    String salary;
+    Long salary;
 
     @ManyToMany
     List<Nurse> nurses = new ArrayList<>();

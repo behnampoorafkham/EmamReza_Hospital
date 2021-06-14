@@ -11,11 +11,11 @@ public class Nurse {
     public Nurse() {
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -43,15 +43,15 @@ public class Nurse {
         this.sex = sex;
     }
 
-    public String getSalary() {
+    public Double getSalary() {
         return salary;
     }
 
-    public void setSalary(String salary) {
+    public void setSalary(Double salary) {
         this.salary = salary;
     }
 
-    public Nurse(int id, String name, String age, Boolean sex, String salary) {
+    public Nurse(Long id, String name, String age, Boolean sex, Double salary) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -60,7 +60,7 @@ public class Nurse {
     }
 
     @Id
-    int id;
+    Long id;
 
     @Column(name = "name")
     String name;
@@ -72,7 +72,7 @@ public class Nurse {
     Boolean sex;
 
     @Column(name = "salary")
-    String salary;
+    Double salary;
 
     @ManyToMany
     List<Patient> patients = new ArrayList<>();

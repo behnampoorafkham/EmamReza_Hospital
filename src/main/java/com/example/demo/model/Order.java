@@ -15,13 +15,13 @@ public class Order {
     }
 
     @Id
-    int id;
+    Long id;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -89,18 +89,18 @@ public class Order {
         this.medicines = medicines;
     }
 
-    public Long getSum() {
+    public Double getSum() {
         return sum;
     }
 
-    public void setSum(Long sum) {
+    public void setSum(Double sum) {
         this.sum = sum;
     }
 
     @Column(name = "number")
     int number;
 
-    public Order(int id, int number, Room room_id, Patient patient_id, Category category_id, Doctor doctor_id, List<Nurse> nurses, List<Activity> activities, List<Medicine> medicines, Long sum) {
+    public Order(Long id, int number, Room room_id, Patient patient_id, Category category_id, Doctor doctor_id, List<Nurse> nurses, List<Activity> activities, List<Medicine> medicines, Double sum) {
         this.id = id;
         this.number = number;
         this.room_id = room_id;
@@ -135,5 +135,5 @@ public class Order {
     List<Medicine> medicines = new ArrayList<>();
 
     @Column(name = "sum")
-    Long sum;
+    Double sum;
 }

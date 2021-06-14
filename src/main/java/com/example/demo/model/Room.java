@@ -10,11 +10,11 @@ import java.util.List;
 @Entity
 public class Room {
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -45,7 +45,7 @@ public class Room {
     public Room() {
     }
 
-    public Room(int id, int number, Doctor doctor_id, List<Nurse> nurses) {
+    public Room(Long id, int number, Doctor doctor_id, List<Nurse> nurses) {
         this.id = id;
         this.number = number;
         this.doctor_id = doctor_id;
@@ -53,7 +53,7 @@ public class Room {
     }
 
     @Id
-    int id;
+    Long id;
 
     @Column(name = "number")
     int number;
