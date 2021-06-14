@@ -27,19 +27,19 @@ public class Room {
     }
 
     public Doctor getDoctor_id() {
-        return doctor_id;
+        return doctor;
     }
 
     public void setDoctor_id(Doctor doctor_id) {
-        this.doctor_id = doctor_id;
+        this.doctor = doctor_id;
     }
 
     public List<Nurse> getNurses() {
         return nurses;
     }
 
-    public void setNurses(List<Nurse> nurses) {
-        this.nurses = nurses;
+    public void setNurses(Nurse nurse) {
+        this.nurses.add(nurse);
     }
 
     public Room() {
@@ -48,7 +48,7 @@ public class Room {
     public Room(Long id, int number, Doctor doctor_id, List<Nurse> nurses) {
         this.id = id;
         this.number = number;
-        this.doctor_id = doctor_id;
+        this.doctor = doctor_id;
         this.nurses = nurses;
     }
 
@@ -59,7 +59,7 @@ public class Room {
     int number;
 
     @ManyToOne
-    Doctor doctor_id;
+    Doctor doctor;
 
     @OneToMany
     List<Nurse> nurses = new ArrayList<>();

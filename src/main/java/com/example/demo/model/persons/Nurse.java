@@ -84,8 +84,8 @@ public class Nurse {
         return patients;
     }
 
-    public void setPatients(List<Patient> patients) {
-        this.patients = patients;
+    public void setPatients(Patient patient) {
+        this.patients.add(patient);
     }
 
     public Room getRoom() {

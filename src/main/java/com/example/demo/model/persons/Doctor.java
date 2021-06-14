@@ -73,24 +73,24 @@ public class Doctor {
         return patients;
     }
 
-    public void setPatients(List<Patient> patients) {
-        this.patients = patients;
+    public void setPatients(Patient patient) {
+        this.patients.add(patient);
     }
 
     public List<Room> getRooms() {
         return rooms;
     }
 
-    public void setRooms(List<Room> rooms) {
-        this.rooms = rooms;
+    public void setRooms(Room room) {
+        this.rooms.add(room);
     }
 
     public Category getCategory_id() {
-        return category_id;
+        return category;
     }
 
     public void setCategory_id(Category category_id) {
-        this.category_id = category_id;
+        this.category = category_id;
     }
 
     @Column(name = "sex")
@@ -106,5 +106,5 @@ public class Doctor {
     List<Room> rooms = new ArrayList<>();
 
     @OneToOne
-    Category category_id;
+    Category category;
 }
