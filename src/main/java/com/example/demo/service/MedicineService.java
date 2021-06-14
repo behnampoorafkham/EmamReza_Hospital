@@ -1,10 +1,10 @@
 package com.example.demo.service;
 
-import com.example.demo.Repository.CategoryRep;
 import com.example.demo.Repository.MedicineRep;
-import com.example.demo.model.Category;
 import com.example.demo.model.Medicine;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class MedicineService {
@@ -19,8 +19,8 @@ public class MedicineService {
         medicineRep.deleteById(id);
     }
 
-    public void findMedicine(Long id){
-        medicineRep.findById(id);
+    public Optional<Medicine> findMedicine(Long id){
+        return medicineRep.findById(id);
     }
 
 }

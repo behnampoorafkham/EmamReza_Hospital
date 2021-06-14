@@ -1,11 +1,10 @@
 package com.example.demo.service;
 
 import com.example.demo.Repository.persons.DoctorRep;
-import com.example.demo.Repository.persons.NurseRep;
 import com.example.demo.model.persons.Doctor;
-import com.example.demo.model.persons.Nurse;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class DoctorService {
@@ -21,8 +20,8 @@ public class DoctorService {
         doctorRep.deleteById(id);
     }
 
-    public void findDoctor(Long id){
-        doctorRep.findById(id);
+    public Optional<Doctor> findDoctor(Long id){
+       return doctorRep.findById(id);
     }
 
 }

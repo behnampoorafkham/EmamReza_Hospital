@@ -4,6 +4,8 @@ import com.example.demo.Repository.persons.NurseRep;
 import com.example.demo.model.persons.Nurse;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class  NurseService{
 
@@ -17,8 +19,8 @@ public class  NurseService{
         nurseRep.deleteById(id);
     }
 
-    public void findNurse(Long id){
-        nurseRep.findById(id);
+    public Optional<Nurse> findNurse(Long id){
+       return nurseRep.findById(id);
     }
 
 }

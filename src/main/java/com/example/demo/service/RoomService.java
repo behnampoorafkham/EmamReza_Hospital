@@ -4,6 +4,8 @@ import com.example.demo.Repository.RoomRep;
 import com.example.demo.model.Room;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class RoomService {
 
@@ -17,8 +19,8 @@ public class RoomService {
         roomRep.deleteById(id);
     }
 
-    public void findRoom(Long id){
-        roomRep.findById(id);
+    public Optional<Room> findRoom(Long id){
+        return roomRep.findById(id);
     }
 
 }

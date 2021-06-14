@@ -6,6 +6,8 @@ import com.example.demo.model.Order;
 import com.example.demo.model.persons.Nurse;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class OrderService {
 
@@ -35,8 +37,8 @@ public class OrderService {
         orderRep.deleteById(id);
     }
 
-    public void findOrder(Long id){
-        orderRep.findById(id);
+    public Optional<Order> findOrder(Long id){
+       return orderRep.findById(id);
     }
 
 }

@@ -4,6 +4,8 @@ import com.example.demo.Repository.ActivityRep;
 import com.example.demo.model.Activity;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class ActivityService {
 
@@ -17,8 +19,8 @@ public class ActivityService {
         activityRep.deleteById(id);
     }
 
-    public void findActivity(Long id){
-        activityRep.findById(id);
+    public Optional<Activity> findActivity(Long id){
+       return activityRep.findById(id);
     }
 
 }
