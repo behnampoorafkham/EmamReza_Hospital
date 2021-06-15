@@ -33,6 +33,12 @@ public class OrderService {
         return orderRep.save(order);
     }
 
+    public Order updateOrder(Order order){
+        orderRep.deleteById(order.getId());
+        return orderRep.save(order);
+    }
+
+
     public void deleteOrder(Long id){
         orderRep.deleteById(id);
     }

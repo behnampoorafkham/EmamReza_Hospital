@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.Repository.persons.DoctorRep;
+import com.example.demo.model.Activity;
 import com.example.demo.model.persons.Doctor;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,11 @@ public class DoctorService {
 
     public Doctor addDoctor(Doctor doctor){
         doctor.setSalary(0.0);
+        return doctorRep.save(doctor);
+    }
+
+    public Doctor updateDoctor(Doctor doctor){
+        doctorRep.deleteById(doctor.getId());
         return doctorRep.save(doctor);
     }
 

@@ -15,6 +15,11 @@ public class ActivityService {
         return activityRep.save(activity);
     }
 
+    public Activity updateActivity(Activity activity){
+        activityRep.deleteById(activity.getId());
+        return activityRep.save(activity);
+    }
+
     public void deleteActivity(Long id){
         activityRep.deleteById(id);
     }

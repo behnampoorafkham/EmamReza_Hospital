@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.Repository.persons.NurseRep;
+import com.example.demo.model.Activity;
 import com.example.demo.model.persons.Nurse;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +13,11 @@ public class  NurseService{
     NurseRep nurseRep;
 
     public Nurse addNurse(Nurse nurse){
+        return nurseRep.save(nurse);
+    }
+
+    public Nurse updateNurse(Nurse nurse){
+        nurseRep.deleteById(nurse.getId());
         return nurseRep.save(nurse);
     }
 
