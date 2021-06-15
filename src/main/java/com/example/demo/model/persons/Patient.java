@@ -101,6 +101,41 @@ public class Patient {
     @Column(name = "age")
     String age;
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setNurses(List<Nurse> nurses) {
+        this.nurses = nurses;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public void setMedicines(List<Medicine> medicines) {
+        this.medicines = medicines;
+    }
+
+    public Doctor getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
+    }
+
+    @Column(name = "password ")
+    private String password;
+
     @Column(name = "sex")
     Boolean sex;
 

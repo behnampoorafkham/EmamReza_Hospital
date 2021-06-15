@@ -12,6 +12,7 @@ public class DoctorController {
     @Autowired
     DoctorService doctorService;
 
+    @PostMapping("/add")
     public Doctor updateDoctor(@RequestBody Doctor doctor){
         return doctorService.updateDoctor(doctor);
     }

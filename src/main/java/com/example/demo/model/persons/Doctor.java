@@ -96,6 +96,33 @@ public class Doctor {
     @Column(name = "sex")
     Boolean sex;
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setPatients(List<Patient> patients) {
+        this.patients = patients;
+    }
+
+    public void setRooms(List<Room> rooms) {
+        this.rooms = rooms;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    @Column(name = "password ")
+    private String password;
+
     @Column(name = "salary")
     Double salary;
 

@@ -65,6 +65,21 @@ public class Nurse {
     @Column(name = "name")
     String name;
 
+    @Column(name = "password ")
+    private String password;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setPatients(List<Patient> patients) {
+        this.patients = patients;
+    }
+
     @Column(name = "age")
     String age;
 
